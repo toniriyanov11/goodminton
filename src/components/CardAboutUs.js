@@ -8,7 +8,7 @@ function CardAboutUs ({image, title, description}) {
                 <img src={image} alt={title}/>
             </div>
             <div className="text-center">
-                <p className="font-semibold mb-4 text-lg">{title}</p>
+                <p className="font-semibold mb-2 text-lg">{title}</p>
                 <p>{description}</p>
             </div>
         </div>

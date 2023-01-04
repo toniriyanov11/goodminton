@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 function Header () {
     const [hamburgerMenu, setHamburgerMenu] = useState(false)
-    const hamburgerMenuVisibleClass = 'block bg-white absolute top-100 h-screen z-50 w-full text-primary'
+    const hamburgerMenuVisibleClass = 'block bg-white fixed top-100 z-[20] h-screen w-full text-primary'
     const hamburgerMenuInvisibleClass = 'hidden'
     const hamburgerIconClass = 'text-2xl visible md:invisible text-black'
 
@@ -22,7 +22,7 @@ function Header () {
   
 
     return (
-        <header className='bg-white sticky'>
+        <header className='bg-white fixed w-full z-10'>
             <div className='px-4 py-3 flex justify-between items-center'>
                 <img src={logo} alt='logo'></img>
                 {hamburgerIcon}
