@@ -3,8 +3,7 @@ import logo from '../assets/image/logo.svg'
 function Footer(){
 
     const date = new Date();
-    const year = date.getFullYear()
-    console.log(year)
+    const year = date.getFullYear();
 
     return(
         <footer className="bg-white rounded-tr-[8rem] px-6 pt-14 pb-10 text-left -mt-[8rem] text-black relative z-4 drop-shadow-xl">
