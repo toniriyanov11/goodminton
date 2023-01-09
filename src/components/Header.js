@@ -1,10 +1,11 @@
 import logo from '../assets/image/logo.svg'
 import logoWhite from '../assets/image/logo-white.svg'
 import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 function Header () {
     const [hamburgerMenu, setHamburgerMenu] = useState(false)
+    const [headerClass, setHeaderClass] = useState('bg-white w-full z-10')
     const hamburgerMenuVisibleClass = 'block bg-primary fixed top-0 z-[30] h-screen w-full text-primary overscroll-none' 
     const hamburgerMenuInvisibleClass = 'hidden'
     const hamburgerIconClassHidden = 'text-2xl visible md:invisible text-black'
@@ -13,6 +14,21 @@ function Header () {
     const toggleHamburgerMenu = () => {
         setHamburgerMenu(!hamburgerMenu)
     }
+
+    const handleScroll = () => {
+       let scrollValue = window.pageYOffset 
+       if(scrollValue > 0){
+            setHeaderClass('bg-white fixed w-full z-10 drop-shadow-md')
+       }else{
+            setHeaderClass('bg-white w-full z-10')
+       }
+    }
+
+
+    useEffect(()=>{
+        window.onscroll = () => handleScroll()
+    },[headerClass])
+
 
     let hamburgerIcon ;
     if(!hamburgerMenu){
@@ -24,7 +40,7 @@ function Header () {
 
 
     return (
-        <header className='bg-white fixed w-full z-10'>
+        <header className={headerClass}>
             <div className='px-4 py-3 flex justify-between items-center'>
                 <img src={logo} alt='logo'></img>
                 {hamburgerIcon}
