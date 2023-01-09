@@ -5,7 +5,7 @@ import { useState,useEffect } from 'react'
 
 function Header () {
     const [hamburgerMenu, setHamburgerMenu] = useState(false)
-    const [headerClass, setHeaderClass] = useState('bg-white w-full z-10')
+    const [headerClass, setHeaderClass] = useState('bg-white fixed w-full z-10')
     const hamburgerMenuVisibleClass = 'block bg-primary fixed top-0 z-[30] h-screen w-full text-primary overscroll-none' 
     const hamburgerMenuInvisibleClass = 'hidden'
     const hamburgerIconClassHidden = 'text-2xl visible md:invisible text-black'
@@ -20,7 +20,7 @@ function Header () {
        if(scrollValue > 0){
             setHeaderClass('bg-white fixed w-full z-10 drop-shadow-md')
        }else{
-            setHeaderClass('bg-white w-full z-10')
+            setHeaderClass('bg-white fixed w-full z-10')
        }
     }
 
