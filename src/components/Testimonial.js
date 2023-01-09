@@ -5,7 +5,7 @@ import CardTestimonial from './CardTestimonial';
 function Testimonial() {
     return(
         <section id="testimonial" className="p-4 py-12 text-left">
-            <p className="font-bold text-2xl flex items-center"><span class="h-1 bg-secondary inline-block mx-2 w-[30px]"></span>testimonial.</p>
+            <p className="font-bold text-2xl flex items-center"><span className="h-1 bg-secondary inline-block mx-2 w-[30px]"></span>testimonial.</p>
             <div className="mx-auto w-4/5 my-10 text-black relative">
                 <CardTestimonial image={avatar} quote=""/>
                 <RxArrowLeft className='text-primary bg-secondary w-10 h-10 p-2 rounded-full absolute top-[40%] -left-8 drop-shadow-lg'/>

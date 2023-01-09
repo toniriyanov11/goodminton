@@ -25,13 +25,13 @@ function AboutUs () {
 
     return (
         <section id="about-us" className="p-4 py-12 text-left">
-            <p className="font-bold text-2xl flex items-center"><span class="h-1 bg-secondary inline-block mx-2 w-[30px]"></span>about us.</p>
+            <p className="font-bold text-2xl flex items-center"><span className="h-1 bg-secondary inline-block mx-2 w-[30px]"></span>about us.</p>
             <p className="my-8 w-3/4">Sekelompok pemuda yang mulai membuncit memulai olahraga kembali dengan teman satu jurusan pada 30 Januari 2022. Namun karena banyaknya teman-teman yang mempunyai hasrat untuk rutin bermain badminton dan kesusahan mencari teman main, maka dari itu Goodminton menjadi komunitas publik untuk siapa saja yang ingin bermain badminton.</p>
             <div className="mx-3 flex flex-col">   
                 {
-                    cardContent.map((card)=>{
+                    cardContent.map((card,index)=>{
                         return(
-                            <CardAboutUs image={card.image} title={card.title} description={card.description}/>
+                            <CardAboutUs image={card.image} key={index} title={card.title} description={card.description}/>
                         )
                     })
                 }
